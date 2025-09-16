@@ -1,7 +1,7 @@
 # 🚀 Project Setup & CI Pipeline
 
 This repo shows how I set up a simple Node.js project with Docker and a
-basic CI script. Everything is lightweight and easy to follow.
+CI script.
 
 ------------------------------------------------------------------------
 
@@ -10,8 +10,8 @@ basic CI script. Everything is lightweight and easy to follow.
 ### 1. Clone the repo
 
 ``` bash
-git clone <your-repo-url>
-cd <your-project-folder>
+git clone https://github.com/sherifemad53/TeamavailTest.gi
+cd TeamavailTest
 ```
 
 ### 2. Install dependencies (local dev)
@@ -83,16 +83,20 @@ needed, like Redis or Postgres).
 Basic example:
 
 ``` yaml
-version: "3.9"
+version: "3.8"
 
 services:
   app:
     build: .
+    container_name: teamavail_app
     ports:
       - "3000:3000"
-    volumes:
-      - .:/app
-    command: npm start
+    networks:
+      - app-net
+    
+networks:
+  app-net:
+    driver: bridge
 ```
 
 Run with:
