@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    container_name: teamavail_app
+    ports:
+      - "3000:3000"
+    networks:
+      - app-net
+    
+networks:
+  app-net:
+    driver: bridge
