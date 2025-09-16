@@ -5,7 +5,7 @@ services:
     build: .
     container_name: teamavail_app
     ports:
-      - "3000:80"
+      - "3000:3000"
     networks:
       - app-net
     
