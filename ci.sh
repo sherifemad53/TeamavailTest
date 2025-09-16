@@ -13,4 +13,4 @@ echo "=== Building Docker image ==="
 docker build -t teamavailtest .
 
 echo "=== Starting with Docker Compose ==="
-docker-compose up -d
+docker compose up -d
