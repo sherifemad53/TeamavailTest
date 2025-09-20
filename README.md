@@ -120,4 +120,4 @@ I tested the whole flow locally:
 
 ## Screen Shots
 
-![App Screenshot](images/Screenshot1.png)
+![App Screenshot](assets/Screenshot1.png)
