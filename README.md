@@ -10,7 +10,7 @@ CI script.
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/sherifemad53/TeamavailTest.gi
+git clone https://github.com/sherifemad53/TeamavailTest.git
 cd TeamavailTest
 ```
 
@@ -87,17 +87,22 @@ Basic example:
 version: "3.8"
 
 services:
-    app:
-        build: .
-        container_name: teamavail_app
-        ports:
-            - "3000:3000"
-        networks:
-            - app-net
-
+  app:
+    build: /app
+    container_name: teamavail_app
+    ports:
+      - "3000:3000"
+    networks:
+      - app-net
+    volumes:
+      - output_json:/app/output
+    
 networks:
-    app-net:
-        driver: bridge
+  app-net:
+    driver: bridge
+
+volumes:
+  output_json:
 ```
 
 Run with:

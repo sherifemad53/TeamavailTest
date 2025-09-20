@@ -1,6 +1,0 @@
-node_modules
-output/
-.env
-*.log
-ci.sh
-assets/
